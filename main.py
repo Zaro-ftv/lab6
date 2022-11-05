@@ -1,11 +1,11 @@
-def encode(password):
+def encode(password):               # function to encode user's password
     encoded_password = ""
     for digit in password:
         encoded_password = encoded_password + str((int(digit) + 3) % 10)
     return encoded_password
 
 
-def decode(password):
+def decode(password):               # function to decode the user's password
     decoded_password = ""
     for digit in password:
         decoded_password = decoded_password + str((int(digit) - 3) % 10)
@@ -14,7 +14,7 @@ def decode(password):
 
 if __name__ == '__main__':
 
-    while True:
+    while True:             # displays menu options
         print('Menu')
         print('-------------')
         print('1. Encode')
